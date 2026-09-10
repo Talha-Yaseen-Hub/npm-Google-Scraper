@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Local build / output
+dist/
+dist-ssr/
+*.local
+
+# Environment & credentials
+.env
+.env.local
+.env.*.local
+
+# Helper scripts
+npm_run.cmd
+start_dev.cmd
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
