@@ -630,6 +630,14 @@ body {
   align-items: start;
   padding: 5rem 5rem 4rem 6rem;
   min-height: 520px;
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills-v2-container.tab-transitioning {
+  opacity: 0;
+  transform: translateY(8px);
 }
 
 /* --- Left Text Content --- */
