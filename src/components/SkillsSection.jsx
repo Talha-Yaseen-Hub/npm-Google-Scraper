@@ -612,6 +612,14 @@ export default function SkillsSection() {
 
   return (
     <section id="skills" className="skills-section-v2" ref={sectionRef}>
+      {/* Section Header Eyebrow */}
+      <div className="skills-v2-eyebrow-wrapper">
+        <div className="section-eyebrow">
+          <span className="eyebrow-dot"></span>
+          <span className="eyebrow-text">02 // SKILLS &amp; EXPERTISE</span>
+        </div>
+      </div>
+
       {/* Hanging Navigation Tabs */}
       <div className="hanging-tabs-bar">
         {navTabs.map((tab) => (
@@ -681,22 +689,25 @@ export default function SkillsSection() {
         </div>
       </div>
 
-      {/* Bottom Tech Ribbon */}
+      {/* Bottom Tech Ribbon - Exact TasteSkill layout */}
       <div className="skills-v2-ribbon">
-        <p className="skills-v2-ribbon-label">Core Tech Stack &amp; Frameworks</p>
+        <h3 className="skills-v2-ribbon-title">Core tech stack &amp; tools</h3>
         <div className="skills-v2-ribbon-grid">
           {[
-            { id: '01', name: 'React' },
-            { id: '02', name: 'Next.js' },
-            { id: '03', name: 'TypeScript' },
-            { id: '04', name: 'Node.js' },
-            { id: '05', name: 'Tailwind' },
-            { id: '06', name: 'PostgreSQL' },
-            { id: '07', name: 'Figma' },
-            { id: '08', name: 'Git & CI/CD' },
+            { id: '01', name: 'React', icon: <Code2 size={20} color="#000000" /> },
+            { id: '02', name: 'Next.js', icon: <Globe size={20} color="#000000" /> },
+            { id: '03', name: 'TypeScript', icon: <Layout size={20} color="#000000" /> },
+            { id: '04', name: 'Node.js', icon: <Terminal size={20} color="#000000" /> },
+            { id: '05', name: 'PostgreSQL', icon: <Database size={20} color="#000000" /> },
+            { id: '06', name: 'Tailwind', icon: <Palette size={20} color="#000000" /> },
+            { id: '07', name: 'Docker', icon: <Terminal size={20} color="#000000" /> },
+            { id: '08', name: 'Git & CI/CD', icon: <Code2 size={20} color="#000000" /> },
           ].map((item) => (
             <div key={item.id} className="skills-v2-ribbon-card">
               <span className="src-index">{item.id}</span>
+              <div className="src-icon-circle">
+                {item.icon}
+              </div>
               <span className="src-title">{item.name}</span>
             </div>
           ))}

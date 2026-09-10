@@ -559,13 +559,18 @@ body {
    ========================================== */
 .skills-section-v2 {
   position: relative;
-  padding: 0 0 5rem 0;
+  padding: 3rem 0 5rem 0;
   max-width: 1440px;
-  margin: 4rem auto 0;
-  width: calc(100% - 4rem);
+  margin: 0 auto;
+  width: 100%;
   background: transparent;
   border-radius: 0;
   overflow: visible;
+}
+
+.skills-v2-eyebrow-wrapper {
+  padding: 0 6rem;
+  margin-bottom: 1.75rem;
 }
 
 /* --- Hanging Navigation Tabs --- */
@@ -1055,71 +1060,106 @@ body {
   font-weight: 500;
 }
 
-/* --- Bottom Tech Ribbon V2 --- */
+/* --- Bottom Tech Ribbon V2 (TasteSkill Exact Match) --- */
 .skills-v2-ribbon {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
   align-items: center;
-  padding: 2rem 5rem 0;
-  margin-top: 2rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 3rem 2rem 0;
+  margin-top: 3rem;
+  width: 100%;
+  border-top: none;
 }
 
-.skills-v2-ribbon-label {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: #64748B;
-  text-transform: uppercase;
+.skills-v2-ribbon-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #334155;
+  letter-spacing: -0.01em;
+  margin: 0;
+  text-align: center;
 }
 
 .skills-v2-ribbon-grid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
   width: 100%;
+  max-width: 1200px;
+}
+
+@media (min-width: 1024px) {
+  .skills-v2-ribbon-grid {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0.75rem;
+  }
 }
 
 .skills-v2-ribbon-card {
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.95);
-  border-radius: 18px;
-  padding: 1.25rem 0.75rem;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 1rem 0.5rem 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
+  gap: 0.85rem;
   text-align: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
   cursor: pointer;
   position: relative;
+  min-height: 125px;
 }
 
 .skills-v2-ribbon-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.07);
-  border-color: rgba(255, 82, 0, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.06);
 }
 
 .src-index {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #94A3B8;
+  font-size: 0.65rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-weight: 500;
+  color: #CBD5E1;
   position: absolute;
-  top: 0.75rem;
-  left: 0.85rem;
+  top: 10px;
+  left: 12px;
+}
+
+.src-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #F8FAFC;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.skills-v2-ribbon-card:hover .src-icon-circle {
+  transform: scale(1.08);
+  background: #F1F5F9;
 }
 
 .src-title {
-  font-size: 0.88rem;
-  font-weight: 600;
+  font-size: 0.82rem;
+  font-weight: 500;
   color: #1E293B;
-  margin-top: 0.5rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.src-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-top: 0;
+  line-height: 1.2;
 }
 
 /* Animations */
