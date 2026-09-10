@@ -559,6 +559,436 @@ body {
   transform: translateY(-2px);
 }
 
+/* ==========================================
+   SKILLS & TECH SECTION STYLING (MATCHING SCREENSHOT)
+   ========================================== */
+.skills-section {
+  padding: 7rem 5rem 7rem 6rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.skills-hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1.15fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.skills-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.skills-title {
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: var(--text-dark);
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.skills-title em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  margin-right: 0.25rem;
+}
+
+.skills-description {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+}
+
+.skills-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.cta-dark-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: #141414;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+.cta-dark-btn strong {
+  font-weight: 700;
+}
+
+.cta-dark-btn:hover {
+  background: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.cta-glass-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  color: #1A1A1A;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.cta-glass-btn:hover {
+  transform: translateY(-2px);
+  border-color: #000000;
+  background: #FFFFFF;
+}
+
+/* 3D Floating Visual Ecosystem (Right Side) */
+.skills-visual-ecosystem {
+  position: relative;
+  height: 460px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ecosystem-card {
+  position: absolute;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.ecosystem-card:hover {
+  transform: scale(1.03) translateY(-4px) !important;
+  z-index: 40 !important;
+}
+
+/* 1. Terminal Window (Top Left) */
+.terminal-card {
+  top: 10px;
+  left: 10px;
+  width: 290px;
+  background: #18181B;
+  color: #F4F4F5;
+  border-radius: 14px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 20;
+}
+
+.terminal-header {
+  background: #27272A;
+  padding: 0.6rem 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.terminal-dots .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.dot.red { background: #EF4444; }
+.dot.yellow { background: #F59E0B; }
+.dot.green { background: #10B981; }
+
+.terminal-title {
+  font-size: 0.72rem;
+  color: #A1A1AA;
+  font-family: monospace;
+}
+
+.terminal-body {
+  padding: 1rem;
+  font-family: monospace;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.command-line {
+  color: #38BDF8;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.status-item {
+  color: #A1A1AA;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.35rem;
+}
+
+.check-icon {
+  color: #34D399;
+}
+
+.terminal-footer {
+  margin-top: 0.75rem;
+  color: #71717A;
+  font-size: 0.75rem;
+}
+
+/* 2. Design System Card (Top Right) */
+.design-system-card {
+  top: 30px;
+  right: 15px;
+  width: 195px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.07);
+  padding: 1.1rem;
+  z-index: 15;
+}
+
+.ds-header {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #18181B;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.ds-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ds-list li {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #4B5563;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ds-icon {
+  font-weight: 700;
+  color: var(--accent-orange);
+  width: 18px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* 3. Code Editor Card (Bottom Right) */
+.code-card {
+  bottom: 20px;
+  right: 35px;
+  width: 210px;
+  background: #18181B;
+  color: #A1A1AA;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+  padding: 0.85rem;
+  z-index: 25;
+}
+
+.code-header {
+  font-size: 0.72rem;
+  color: #71717A;
+  font-family: monospace;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #27272A;
+  padding-bottom: 0.35rem;
+}
+
+.code-body pre, .code-body code {
+  font-family: monospace;
+  font-size: 0.73rem;
+  line-height: 1.45;
+  color: #F4F4F5;
+}
+
+/* 4. Center 3D Ceramic Stone Badge */
+.stone-badge-card {
+  top: 150px;
+  left: 200px;
+  z-index: 30;
+}
+
+.stone-tile {
+  width: 110px;
+  height: 110px;
+  background: linear-gradient(145deg, #F5F3ED 0%, #DFDBD2 100%);
+  border-radius: 22px;
+  box-shadow: 
+    0 24px 50px rgba(0, 0, 0, 0.14),
+    inset 0 2px 4px rgba(255, 255, 255, 0.9),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-5deg);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.stone-badge-card:hover .stone-tile {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.stone-engraved-logo {
+  color: #8C857B;
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.9));
+}
+
+/* 5. Info Card (Bottom Left) */
+.info-card {
+  bottom: 35px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  padding: 0.75rem 1.15rem;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  z-index: 15;
+}
+
+.info-icon-box {
+  width: 36px;
+  height: 36px;
+  background: #FFF0E6;
+  color: var(--accent-orange);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #18181B;
+}
+
+.info-sub {
+  font-size: 0.72rem;
+  color: #64748B;
+}
+
+/* Bottom Tech Ribbon Section */
+.tech-ribbon-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.tech-ribbon-header {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #64748B;
+  text-transform: uppercase;
+}
+
+.tech-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+.tech-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  padding: 1.25rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.07);
+  border-color: rgba(255, 82, 0, 0.35);
+}
+
+.tech-num {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #94A3B8;
+  position: absolute;
+  top: 0.75rem;
+  left: 0.85rem;
+}
+
+.tech-icon-wrapper {
+  color: var(--accent-orange);
+  margin-top: 0.4rem;
+  transition: transform 0.3s ease;
+}
+
+.tech-card:hover .tech-icon-wrapper {
+  transform: scale(1.15);
+}
+
+.tech-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1E293B;
+}
+
 /* Animations */
 @keyframes pulseDot {
   0%, 100% { transform: scale(1); opacity: 1; }
@@ -614,6 +1044,19 @@ body {
   .about-title {
     font-size: 2.4rem;
   }
+  .skills-section {
+    padding: 4rem 2.5rem;
+  }
+  .skills-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .skills-title {
+    font-size: 3rem;
+  }
+  .tech-cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 @media (max-width: 640px) {
@@ -634,5 +1077,18 @@ body {
   }
   .about-title {
     font-size: 2rem;
+  }
+  .skills-section {
+    padding: 3rem 1.5rem;
+  }
+  .skills-title {
+    font-size: 2.2rem;
+  }
+  .tech-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skills-visual-ecosystem {
+    height: 420px;
+    transform: scale(0.85);
   }
 }
