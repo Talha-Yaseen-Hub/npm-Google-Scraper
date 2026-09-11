@@ -140,7 +140,7 @@ export default function ProjectsSection() {
             <div 
               className="fan-card fan-card-poster"
               ref={(el) => (fanDeckRef.current[0] = el)}
-              data-base-transform="rotate(-3deg)"
+              data-base-transform="rotate(0deg)"
             >
               <div className="card-wire"></div>
               <div className="fan-poster-header">
@@ -177,7 +177,7 @@ export default function ProjectsSection() {
             <div 
               className="fan-card fan-card-dark"
               ref={(el) => (fanDeckRef.current[1] = el)}
-              data-base-transform="rotate(5deg)"
+              data-base-transform="rotate(0deg)"
             >
               <div className="card-wire"></div>
               <div className="fan-dark-badge">
@@ -196,7 +196,7 @@ export default function ProjectsSection() {
             <div 
               className="fan-card fan-card-snapshot"
               ref={(el) => (fanDeckRef.current[2] = el)}
-              data-base-transform="rotate(-2deg)"
+              data-base-transform="rotate(0deg)"
             >
               <div className="card-wire"></div>
               <div className="fan-snapshot-img-box">

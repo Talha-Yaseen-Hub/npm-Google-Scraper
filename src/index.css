@@ -1501,7 +1501,7 @@ body {
 }
 
 .fan-card-poster:hover {
-  transform: rotate(-1deg) scale(1.03) !important;
+  transform: rotate(0deg) scale(1.03) !important;
   box-shadow: 0 28px 65px rgba(0, 0, 0, 0.12);
 }
 
@@ -1598,7 +1598,7 @@ body {
 }
 
 .fan-card-dark:hover {
-  transform: rotate(3deg) scale(1.04) !important;
+  transform: rotate(0deg) scale(1.04) !important;
   box-shadow: 0 32px 75px rgba(0, 0, 0, 0.35);
 }
 
