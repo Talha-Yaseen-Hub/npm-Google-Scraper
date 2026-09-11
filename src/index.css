@@ -633,8 +633,8 @@ body {
   grid-template-columns: 1fr 1.3fr;
   gap: 2rem;
   align-items: start;
-  padding: 5rem 5rem 4rem 6rem;
-  min-height: 520px;
+  padding: 4rem 5rem 1.5rem 6rem;
+  min-height: 380px;
   transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   opacity: 1;
   transform: translateY(0);
@@ -1066,8 +1066,8 @@ body {
   flex-direction: column;
   gap: 1.25rem;
   align-items: center;
-  padding: 3rem 2rem 0;
-  margin-top: 3rem;
+  padding: 0.5rem 2rem 0;
+  margin-top: 0.5rem;
   width: 100%;
   border-top: none;
 }
@@ -1132,18 +1132,21 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #F8FAFC;
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  background: #F4F0EA;
+  border: 1px solid rgba(0, 0, 0, 0.06);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 0.5rem;
-  transition: transform 0.25s ease, background 0.25s ease;
+  color: #2D2723;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
 .skills-v2-ribbon-card:hover .src-icon-circle {
   transform: scale(1.08);
-  background: #F1F5F9;
+  background: #E8E2D5;
+  color: var(--accent-orange);
+  border-color: rgba(255, 82, 0, 0.25);
 }
 
 .src-title {

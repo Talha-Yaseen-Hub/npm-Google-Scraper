@@ -694,14 +694,14 @@ export default function SkillsSection() {
         <h3 className="skills-v2-ribbon-title">Core tech stack &amp; tools</h3>
         <div className="skills-v2-ribbon-grid">
           {[
-            { id: '01', name: 'React', icon: <Code2 size={20} color="#000000" /> },
-            { id: '02', name: 'Next.js', icon: <Globe size={20} color="#000000" /> },
-            { id: '03', name: 'TypeScript', icon: <Layout size={20} color="#000000" /> },
-            { id: '04', name: 'Node.js', icon: <Terminal size={20} color="#000000" /> },
-            { id: '05', name: 'PostgreSQL', icon: <Database size={20} color="#000000" /> },
-            { id: '06', name: 'Tailwind', icon: <Palette size={20} color="#000000" /> },
-            { id: '07', name: 'Docker', icon: <Terminal size={20} color="#000000" /> },
-            { id: '08', name: 'Git & CI/CD', icon: <Code2 size={20} color="#000000" /> },
+            { id: '01', name: 'React', icon: <Code2 size={20} /> },
+            { id: '02', name: 'Next.js', icon: <Globe size={20} /> },
+            { id: '03', name: 'TypeScript', icon: <Layout size={20} /> },
+            { id: '04', name: 'Node.js', icon: <Terminal size={20} /> },
+            { id: '05', name: 'PostgreSQL', icon: <Database size={20} /> },
+            { id: '06', name: 'Tailwind', icon: <Palette size={20} /> },
+            { id: '07', name: 'Docker', icon: <Terminal size={20} /> },
+            { id: '08', name: 'Git & CI/CD', icon: <Code2 size={20} /> },
           ].map((item) => (
             <div key={item.id} className="skills-v2-ribbon-card">
               <span className="src-index">{item.id}</span>
