@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowUpRight, Code2, Sparkles, Cpu, Layers, Zap, Globe, Terminal, ArrowRight } from 'lucide-react';
+import { ArrowUpRight, Sparkles, ArrowRight } from 'lucide-react';
 
 export default function ProjectsSection() {
   const sectionRef = useRef(null);
@@ -36,7 +36,7 @@ export default function ProjectsSection() {
       title: 'nexus-saas',
       tag: 'FULL STACK',
       desc: 'Enterprise SaaS analytics platform built with React 19, Next.js App Router, Tailwind, Node.js microservices, and PostgreSQL.',
-      icon: <Sparkles size={20} />,
+      image: '/proj_thumb_nexus.jpg',
       link: '#'
     },
     {
@@ -44,7 +44,7 @@ export default function ProjectsSection() {
       title: 'taste-skill-ui',
       tag: 'DESIGN SYSTEM',
       desc: 'Modular design system & component library engineered for modern web apps with glassmorphism, fluid typography, and dark mode tokens.',
-      icon: <Layers size={20} />,
+      image: '/proj_thumb_tasteskill.jpg',
       link: '#'
     },
     {
@@ -52,7 +52,7 @@ export default function ProjectsSection() {
       title: 'ai-code-assistant',
       tag: 'AI ENGINE',
       desc: 'LLM-powered developer tool providing real-time code generation, refactoring suggestions, and automated TypeScript type inference.',
-      icon: <Cpu size={20} />,
+      image: '/proj_thumb_aicode.jpg',
       link: '#'
     },
     {
@@ -60,7 +60,7 @@ export default function ProjectsSection() {
       title: 'realtime-chat-engine',
       tag: 'WEBSOCKETS',
       desc: 'High-concurrency chat and collaboration backend built with Node.js, Socket.io, Redis Pub/Sub, and JWT token authentication.',
-      icon: <Zap size={20} />,
+      image: '/project_preview_1.jpg',
       link: '#'
     },
     {
@@ -68,7 +68,7 @@ export default function ProjectsSection() {
       title: 'ecommerce-storefront',
       tag: 'E-COMMERCE',
       desc: 'Headless e-commerce web application featuring server-rendered product pages, Stripe checkout integration, and sub-second page loads.',
-      icon: <Globe size={20} />,
+      image: '/project_preview_2.jpg',
       link: '#'
     },
     {
@@ -76,7 +76,7 @@ export default function ProjectsSection() {
       title: 'devops-dashboard',
       tag: 'INFRASTRUCTURE',
       desc: 'Cloud infrastructure monitoring dashboard displaying real-time CI/CD pipeline builds, Docker container health, and server uptime.',
-      icon: <Terminal size={20} />,
+      image: '/hero_sculpture.jpg',
       link: '#'
     }
   ];
@@ -115,8 +115,8 @@ export default function ProjectsSection() {
                 rel="noreferrer"
               >
                 <div className="proj-top-bar">
-                  <div className="proj-icon-circle">
-                    {proj.icon}
+                  <div className="proj-thumb-box">
+                    <img src={proj.image} alt={proj.title} className="proj-thumb-img" />
                   </div>
                   <span className="proj-arrow">
                     <ArrowUpRight size={16} />

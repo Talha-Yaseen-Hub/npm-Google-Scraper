@@ -1386,23 +1386,35 @@ body {
   align-items: center;
 }
 
-.proj-icon-circle {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
+.proj-thumb-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   background: #F4F0EA;
-  border: 1px solid rgba(0, 0, 0, 0.06);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2D2723;
-  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.project-grid-card:hover .proj-icon-circle {
+.project-grid-card:hover .proj-thumb-box {
   transform: scale(1.08);
-  background: #E8E2D5;
-  color: var(--accent-orange);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+  border-color: rgba(255, 82, 0, 0.35);
+}
+
+.proj-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-grid-card:hover .proj-thumb-img {
+  transform: scale(1.06);
 }
 
 .proj-arrow {
