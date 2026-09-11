@@ -1456,7 +1456,7 @@ body {
 /* Right Column: Tilted Fan Deck Area */
 .projects-v2-right {
   position: relative;
-  min-height: 620px;
+  min-height: 820px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1466,81 +1466,34 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 600px;
+  min-height: 800px;
 }
 
 .fan-card {
   position: absolute;
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
   cursor: pointer;
+  animation: cardFloat 6s ease-in-out infinite;
 }
+
+.fan-card:nth-child(1) { animation-delay: 0s; }
+.fan-card:nth-child(2) { animation-delay: 1.2s; }
+.fan-card:nth-child(3) { animation-delay: 0.6s; }
 
 .fan-card:hover {
-  z-index: 20 !important;
+  z-index: 25 !important;
 }
 
-/* 1. Top Dark Card */
-.fan-card-dark {
-  top: 2%;
-  right: 5%;
-  width: 250px;
-  background: #141414;
-  color: #FFFFFF;
-  border-radius: 22px;
-  padding: 1.8rem 1.5rem;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.28);
-  z-index: 5;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.fan-card-dark:hover {
-  transform: rotate(6deg) scale(1.03) !important;
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.38);
-}
-
-.fan-dark-badge {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFFFFF;
-}
-
-.fan-dark-title {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 1.25;
-  color: #FFFFFF;
-  margin: 0;
-}
-
-.fan-dark-title em {
-  font-style: italic;
-  color: var(--accent-orange);
-}
-
-.fan-dark-author {
-  font-size: 0.76rem;
-  font-weight: 600;
-  color: #94A3B8;
-}
-
-/* 2. Middle Editorial Poster Card (TasteSkill Two-Column Layout) */
+/* 1. Top Editorial Poster Card */
 .fan-card-poster {
-  top: 16%;
+  top: 0%;
   left: 0%;
-  width: 380px;
+  width: 375px;
   background: #FAF9F5;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 22px;
   padding: 1.35rem 1.4rem;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.07);
   z-index: 3;
   display: flex;
   flex-direction: column;
@@ -1548,8 +1501,8 @@ body {
 }
 
 .fan-card-poster:hover {
-  transform: rotate(-2deg) scale(1.02) !important;
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.14);
+  transform: rotate(-1deg) scale(1.03) !important;
+  box-shadow: 0 28px 65px rgba(0, 0, 0, 0.12);
 }
 
 .fan-poster-header {
@@ -1628,15 +1581,67 @@ body {
   object-fit: cover;
 }
 
-/* 3. Bottom Polaroid Snapshot Card */
-.fan-card-snapshot {
-  top: 54%;
+/* 2. Middle Dark Card */
+.fan-card-dark {
+  top: 36%;
   right: 2%;
   width: 250px;
+  background: #141414;
+  color: #FFFFFF;
+  border-radius: 22px;
+  padding: 1.6rem 1.4rem;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.25);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.fan-card-dark:hover {
+  transform: rotate(3deg) scale(1.04) !important;
+  box-shadow: 0 32px 75px rgba(0, 0, 0, 0.35);
+}
+
+.fan-dark-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+}
+
+.fan-dark-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.fan-dark-title em {
+  font-style: italic;
+  color: var(--accent-orange);
+}
+
+.fan-dark-author {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #94A3B8;
+}
+
+/* 3. Bottom Polaroid Snapshot Card */
+.fan-card-snapshot {
+  top: 68%;
+  left: 5%;
+  width: 255px;
   background: #FFFFFF;
   border-radius: 16px;
   padding: 0.85rem 0.85rem 1.1rem;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.09), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -1645,8 +1650,8 @@ body {
 }
 
 .fan-card-snapshot:hover {
-  transform: rotate(3deg) scale(1.04) !important;
-  box-shadow: 0 28px 65px rgba(0, 0, 0, 0.14);
+  transform: rotate(0deg) scale(1.04) !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.13);
 }
 
 .fan-snapshot-img-box {

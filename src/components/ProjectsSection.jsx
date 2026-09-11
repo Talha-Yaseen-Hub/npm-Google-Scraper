@@ -133,15 +133,16 @@ export default function ProjectsSection() {
           </div>
         </div>
 
-        {/* Right Column: Exact TasteSkill Tilted Fan Deck */}
+        {/* Right Column: Spaced Fan Deck Showcase */}
         <div className="projects-v2-right">
           <div className="fan-deck-area">
-            {/* 1. Middle Editorial Poster Card */}
+            {/* 1. Top Poster Card */}
             <div 
               className="fan-card fan-card-poster"
-              ref={(el) => (fanDeckRef.current[1] = el)}
-              data-base-transform="rotate(-4deg)"
+              ref={(el) => (fanDeckRef.current[0] = el)}
+              data-base-transform="rotate(-3deg)"
             >
+              <div className="card-wire"></div>
               <div className="fan-poster-header">
                 <span className="fan-poster-brand">Talha Yaseen</span>
                 <span className="fan-poster-ver">Visual System v2.0</span>
@@ -172,12 +173,13 @@ export default function ProjectsSection() {
               </div>
             </div>
 
-            {/* 2. Top Dark Card */}
+            {/* 2. Middle Dark Card */}
             <div 
               className="fan-card fan-card-dark"
-              ref={(el) => (fanDeckRef.current[0] = el)}
-              data-base-transform="rotate(8deg)"
+              ref={(el) => (fanDeckRef.current[1] = el)}
+              data-base-transform="rotate(5deg)"
             >
+              <div className="card-wire"></div>
               <div className="fan-dark-badge">
                 <Sparkles size={18} />
               </div>
@@ -194,8 +196,9 @@ export default function ProjectsSection() {
             <div 
               className="fan-card fan-card-snapshot"
               ref={(el) => (fanDeckRef.current[2] = el)}
-              data-base-transform="rotate(5deg)"
+              data-base-transform="rotate(-2deg)"
             >
+              <div className="card-wire"></div>
               <div className="fan-snapshot-img-box">
                 <img 
                   src="/project_preview_1.jpg" 
