@@ -14,9 +14,9 @@ export default function ProjectsSection() {
 
       fanDeckRef.current.forEach((card, i) => {
         if (!card) return;
-        const depth = 0.6 + (i * 0.2);
-        const moveX = x * 20 * depth;
-        const moveY = y * 14 * depth;
+        const depth = 0.5 + (i * 0.2);
+        const moveX = x * 18 * depth;
+        const moveY = y * 12 * depth;
         card.style.transform = `${card.dataset.baseTransform} translate(${moveX}px, ${moveY}px)`;
       });
     };
@@ -133,14 +133,50 @@ export default function ProjectsSection() {
           </div>
         </div>
 
-        {/* Right Column: Tilted Fan Deck Showcase */}
+        {/* Right Column: Exact TasteSkill Tilted Fan Deck */}
         <div className="projects-v2-right">
           <div className="fan-deck-area">
-            {/* Top Dark Card */}
+            {/* 1. Middle Editorial Poster Card */}
+            <div 
+              className="fan-card fan-card-poster"
+              ref={(el) => (fanDeckRef.current[1] = el)}
+              data-base-transform="rotate(-4deg)"
+            >
+              <div className="fan-poster-header">
+                <span className="fan-poster-brand">Talha Yaseen</span>
+                <span className="fan-poster-ver">Visual System v2.0</span>
+              </div>
+              
+              <div className="fan-poster-body">
+                <div className="fan-poster-left">
+                  <h4 className="fan-poster-title">
+                    Design<br />
+                    that feels<br />
+                    <em>considered.</em>
+                  </h4>
+                  <p className="fan-poster-sub">
+                    Crafting premium digital experiences with attention to detail and a focus on clarity.
+                  </p>
+                  <div className="fan-poster-link">
+                    <span>View work</span>
+                    <ArrowRight size={14} />
+                  </div>
+                </div>
+                <div className="fan-poster-right">
+                  <img 
+                    src="/project_preview_2.jpg" 
+                    alt="Architectural Render" 
+                    className="fan-poster-side-img"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* 2. Top Dark Card */}
             <div 
               className="fan-card fan-card-dark"
               ref={(el) => (fanDeckRef.current[0] = el)}
-              data-base-transform="rotate(-6deg)"
+              data-base-transform="rotate(8deg)"
             >
               <div className="fan-dark-badge">
                 <Sparkles size={18} />
@@ -149,57 +185,25 @@ export default function ProjectsSection() {
                 One stack.<br />
                 Full control.<br />
                 All built to ship<br />
-                <em>better software</em>.
+                <em>better UI</em>.
               </h4>
               <span className="fan-dark-author">— Talha Yaseen</span>
             </div>
 
-            {/* Middle Editorial Poster Card */}
-            <div 
-              className="fan-card fan-card-poster"
-              ref={(el) => (fanDeckRef.current[1] = el)}
-              data-base-transform="rotate(4deg)"
-            >
-              <div className="fan-poster-header">
-                <span className="fan-poster-brand">Stratos SaaS</span>
-                <span className="fan-poster-ver">System v2.0</span>
-              </div>
-              <h4 className="fan-poster-title">
-                Design that feels<br />
-                <em>considered.</em>
-              </h4>
-              <p className="fan-poster-sub">
-                Crafting premium digital products with attention to detail and a relentless focus on clarity.
-              </p>
-
-              <div className="fan-poster-img-box">
-                <img 
-                  src="/project_preview_1.jpg" 
-                  alt="SaaS Executive Dashboard Mockup" 
-                  className="fan-poster-img"
-                />
-              </div>
-
-              <div className="fan-poster-link">
-                <span>View case study</span>
-                <ArrowRight size={14} />
-              </div>
-            </div>
-
-            {/* Bottom Snapshot Card */}
+            {/* 3. Bottom Polaroid Snapshot Card */}
             <div 
               className="fan-card fan-card-snapshot"
               ref={(el) => (fanDeckRef.current[2] = el)}
-              data-base-transform="rotate(-3deg)"
+              data-base-transform="rotate(5deg)"
             >
               <div className="fan-snapshot-img-box">
                 <img 
-                  src="/project_preview_2.jpg" 
-                  alt="Architectural Sculpture Render" 
+                  src="/project_preview_1.jpg" 
+                  alt="Dashboard Preview" 
                   className="fan-snapshot-img"
                 />
               </div>
-              <span className="fan-snapshot-label">Visual Architecture v2.0</span>
+              <span className="fan-snapshot-label">Stratos SaaS Dashboard v2.0</span>
             </div>
           </div>
         </div>

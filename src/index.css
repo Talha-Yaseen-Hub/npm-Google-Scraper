@@ -1481,29 +1481,29 @@ body {
 
 /* 1. Top Dark Card */
 .fan-card-dark {
-  top: 0%;
-  right: 8%;
-  width: 260px;
-  background: #121212;
+  top: 2%;
+  right: 5%;
+  width: 250px;
+  background: #141414;
   color: #FFFFFF;
-  border-radius: 24px;
-  padding: 2rem 1.6rem;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
-  z-index: 3;
+  border-radius: 22px;
+  padding: 1.8rem 1.5rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.28);
+  z-index: 5;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .fan-card-dark:hover {
-  transform: rotate(-3deg) scale(1.03) !important;
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.35);
+  transform: rotate(6deg) scale(1.03) !important;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.38);
 }
 
 .fan-dark-badge {
-  width: 38px;
-  height: 38px;
-  border-radius: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.12);
   display: flex;
   align-items: center;
@@ -1513,7 +1513,7 @@ body {
 
 .fan-dark-title {
   font-family: var(--font-serif);
-  font-size: 1.45rem;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.25;
   color: #FFFFFF;
@@ -1526,46 +1526,61 @@ body {
 }
 
 .fan-dark-author {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
   color: #94A3B8;
 }
 
-/* 2. Middle Editorial Poster Card */
+/* 2. Middle Editorial Poster Card (TasteSkill Two-Column Layout) */
 .fan-card-poster {
-  top: 22%;
-  left: 2%;
-  width: 310px;
-  background: #F9F8F5;
+  top: 16%;
+  left: 0%;
+  width: 380px;
+  background: #FAF9F5;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 24px;
-  padding: 1.6rem;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-  z-index: 2;
+  border-radius: 22px;
+  padding: 1.35rem 1.4rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  z-index: 3;
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: 1rem;
 }
 
 .fan-card-poster:hover {
-  transform: rotate(1deg) scale(1.03) !important;
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15);
+  transform: rotate(-2deg) scale(1.02) !important;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.14);
 }
 
 .fan-poster-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
   color: #94A3B8;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 0.5rem;
+}
+
+.fan-poster-body {
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.fan-poster-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .fan-poster-title {
   font-family: var(--font-serif);
-  font-size: 1.85rem;
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.1;
   color: #161616;
@@ -1577,35 +1592,21 @@ body {
 }
 
 .fan-poster-sub {
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   line-height: 1.45;
   color: #64748B;
   margin: 0;
-}
-
-.fan-poster-img-box {
-  width: 100%;
-  height: 160px;
-  border-radius: 14px;
-  overflow: hidden;
-  margin: 0.3rem 0;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-}
-
-.fan-poster-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .fan-poster-link {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
   color: #161616;
   transition: color 0.25s ease, transform 0.25s ease;
+  margin-top: 0.25rem;
 }
 
 .fan-card-poster:hover .fan-poster-link {
@@ -1613,16 +1614,30 @@ body {
   transform: translateX(3px);
 }
 
+.fan-poster-right {
+  width: 100%;
+  height: 190px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.fan-poster-side-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* 3. Bottom Polaroid Snapshot Card */
 .fan-card-snapshot {
-  top: 58%;
-  right: 12%;
+  top: 54%;
+  right: 2%;
   width: 250px;
   background: #FFFFFF;
   border-radius: 16px;
   padding: 0.85rem 0.85rem 1.1rem;
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.09), 0 0 0 1px rgba(0, 0, 0, 0.04);
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1630,13 +1645,13 @@ body {
 }
 
 .fan-card-snapshot:hover {
-  transform: rotate(0deg) scale(1.04) !important;
+  transform: rotate(3deg) scale(1.04) !important;
   box-shadow: 0 28px 65px rgba(0, 0, 0, 0.14);
 }
 
 .fan-snapshot-img-box {
   width: 100%;
-  height: 200px;
+  height: 180px;
   border-radius: 10px;
   overflow: hidden;
 }
